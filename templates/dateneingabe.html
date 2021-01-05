@@ -1,0 +1,103 @@
+<!-- Header -->
+{% include "header.html" %}
+<body>
+<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">iSales</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/input">Dateneingabe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/output">Datenausgabe</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- Dateieingabe Kolonen -->
+    <div class="container">
+      <div class="row">
+
+        <!-- Neuer Kunde oder Lieferant hinzufügen -->
+        <div class="col-sm shadow-lg mt-3 mb-3 ml-3 mr-3 pt-4 pb-4 pl-2 pr-2 bg-white text-center">
+            <form action="{{ url_for('auflisten')}}" method="Post">
+                  <h3>Umsatz hinzufügen</h3><br>
+                  <label for="year_list">Jahr:</label>
+                  <select id="year_list" name="year_list" class="form-control">
+                    {% for jahr in year_list %}
+                    <option value="{{ jahr }}">{{ jahr }}</option>
+                    {% endfor %}
+                  </select><br>
+                  <label for="lif_list">Lieferant:</label>
+                  <select id="lif_list" name="lif_list" class="form-control">
+                    {% for lieferant in lif_list %}
+                    <option value="{{ lieferant }}">{{ lieferant }}</option>
+                    {% endfor %}
+                  </select><br>
+                  <label for="kund_list">Kunde:</label>
+                  <select id="kund_list" name="kund_list" class="form-control">
+                    {% for kunde in kund_list %}
+                    <option value="{{ kunde }}">{{ kunde }}</option>
+                    {% endfor %}
+                  </select><br>
+                  <input type="number" name="eingabe_umsatz" placeholder="Umsatz eingeben" class="form-control"><br>
+                  <input type="submit" value="Umsatz eintragen" name="submit" class="btn btn-secondary">
+            </form>
+        </div>
+
+        <!-- Neuer Kunde oder Lieferant hinzufügen -->
+        <div class="col-sm shadow-lg mt-3 mb-3 ml-3 mr-3 pt-4 pb-4 pl-2 pr-2 bg-white text-center">
+            <form action="{{ url_for('auflisten')}}" method="Post">
+                <h3>Neuer Kunde oder Lieferant hinzufügen</h3><br>
+
+                <input type="text" name="eingabe_newkund" placeholder="Kunde eingeben" class="form-control"><br>
+                <input type="text" name="eingabe_newlief" placeholder="Lieferant eingeben" class="form-control"><br>
+                <input type="submit" value="Eintrag erstellen" name="submit" class="btn btn-secondary">
+                {% with messages = get_flashed_messages(category_filter=["kundeorlieferant"]) %}
+                    {% if messages %}
+                        <ul class=flashes>
+                        {% for message in messages %}
+                          <li class="red">{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+            </form>
+        </div>
+
+        <!-- Umsatz löschen -->
+        <div class="col-sm shadow-lg mt-3 mb-3 ml-3 mr-3 pt-4 pb-4 pl-2 pr-2 bg-white text-center">
+            <form action="{{ url_for('auflisten')}}" method="Post">
+                <h3>Umsatz löschen</h3><br>
+
+                <input type="text" name="eingabe_id" placeholder="ID eingeben" class="form-control"><br>
+                <input type="submit" value="Umsatz löschen" name="submit" class="btn btn-secondary">
+                {% with messages = get_flashed_messages(category_filter=["id"]) %}
+                    {% if messages %}
+                        <ul class=flashes>
+                        {% for message in messages %}
+                          <li class="red">{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+            </form>
+        </div>
+
+      </div>
+    </div>
+
+<!-- Footer -->
+{% include "footer.html" %}
+
+</body>
+</html>

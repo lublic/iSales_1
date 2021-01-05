@@ -1,0 +1,43 @@
+<!-- Header -->
+{% include "header.html" %}
+<body>
+<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">iSales</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/input">Dateneingabe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/output">Datenausgabe</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+        <!-- Einleitung für die Applikation -->
+        <div class="shadow-lg mt-3 ml-3 mr-3 pt-4 pb-4 pl-4 pr-4 bg-white text-center">
+            <h1>iSales</h1><br>
+            <h2>Willkommen im Programm «iSales»</h2><br>
+            <p>Ein Programm für Ihre Firma, in welchem Sie ganz einfach die Umsätze Ihrer Kunden eintragen können.
+                Es gibt die Möglichkeit bei der Dateneingabe einen neuen Kunden oder Lieferanten zu Ihrem Portfolio hinzuzufügen.
+                Zugleich können Sie direkt das jeweilige Jahr den Kunden und Lieferanten auswählen und einen Umsatz eintragen.
+                Die gespeicherten Umsätze finden Sie bei der Datenausgabe schön dargestellt.
+                Sie können mit einem intelligenten Filter alles sortieren und erhalten so den von Ihnen gesuchten Umsatz.
+                Zudem kann man auch alles grafisch auswerten und so z.B. Umsätze in den verschiedenen Jahren vergleichen.
+            </p><br>
+            <h3>Jetzt viel Spass beim Nutzen!</h3>
+        </div>
+
+<!-- Footer -->
+{% include "footer.html" %}
+
+</body>
+</html>
