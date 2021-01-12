@@ -70,7 +70,11 @@ def get_revenue():
         yearlist.append(v['jahr'])
 
     # Datenvisualisierung der Umsätze (Quelle: https://plotly.com/python/bar-charts/)
-    fig = px.bar(x=yearlist, y=sumlist, title="Grafische Abbildung der Umsätze", labels=dict(x="Jahre", y="Umsätze in CHF"))
+    if sumlist:
+        fig = px.bar(x=yearlist, y=sumlist, title="Grafische Abbildung der Umsätze", labels=dict(x="Jahre", y="Umsätze in CHF"))
+    else:
+        fig = px.bar(x=None, y=None, title="Grafische Abbildung der Umsätze", labels=dict(x="Jahre", y="Umsätze in CHF"))
+
     div = plotly.io.to_html(fig, include_plotlyjs=True, full_html=False)
 
     # Ausgabe für das Html Datenausgabe

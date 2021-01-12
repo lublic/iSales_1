@@ -7,13 +7,16 @@ Eine Firma XY erhält jährlich Umsatzzahlen Ihrer verschiedenen Kunden, welche 
 Das Webapp iSales soll Abhilfe schaffen und kann genutzt werden um Ihre Kunden und Lieferanten einzutragen und zu pflegen. Der Hauptsinn besteht darin die Umsätze der verschiedenen Jahre einfach einzutragen und wenn nötig einfach zu löschen, jedoch mit einer gewissen Sicherheit. Ein weitere Vorteil ist der Filter mit welchen man gezielt nach einem Umsatz suchen kann. Zusätzlich erhält man eine grafische Abbildung der Umsätze im jeweiligen Jahr.
 
 ## Installation
-1. Zuerst müssen Sie das [Github Repository iSales](https://github.com/lublic/iSales) als Zip-Datei downloaden
+1. Zuerst müssen Sie das [Github Repository iSales](https://github.com/lublic/iSales_1) als Zip-Datei downloaden
 2. Download Zip-Datei entpacken
 3. Programm wie z.B. Pycharm öffnen und die Datei iSales öffnen
 4. Bei Pycharm müssen Sie eine Neue Konfiguration erstellen und **main.py** auswählen
 5. Nun können sie die Playtaste drücken und es wird ein Link z.B. http://127.0.0.1:5000 erscheinen
 6. Auf diese http Adresse klicken und das Programm wird im Explorer geöffnet
 7. Bereit zur Nutzung
+
+## Github
+Da es fehler im ersten Repository gab wurde ein zweites erstellt mit dem Namen iSales_1. Das alte Repository ist folgendes [Github Repository iSales](https://github.com/lublic/iSales)
 
 ## Benutzeranleitung
 
