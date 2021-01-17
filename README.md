@@ -15,8 +15,46 @@ Das Webapp iSales soll Abhilfe schaffen und kann genutzt werden um Ihre Kunden u
 6. Auf diese http Adresse klicken und das Programm wird im Explorer geöffnet
 7. Bereit zur Nutzung
 
+Folgende Pakete müssen noch installiert werden:
+
+- flask
+star:
+    - Flask
+    - flash
+    - render_template
+    - request
+
+- plotly.express as px
+- plotly
+
+- json
+
+- uuid
+
 ## Github
-Da es fehler im ersten Repository gab wurde ein zweites erstellt mit dem Namen iSales_1. Das alte Repository ist folgendes [Github Repository iSales](https://github.com/lublic/iSales)
+Da es fehler im ersten Repository gab wurde ein zweites erstellt mit dem Namen iSales_1. Das alte Repository ist folgendes [Github Repository iSales](https://github.com/lublic/iSales).
+
+## Workflow
+### Dateneingabe
+Man kann neue Kunden, Lieferanten und Umsätze eintragen. Zudem kann man Umsatz-Einträge löschen.
+
+### Datenverarbeitung/Speicherung
+Die Einträgen werden in den folgenden Files eingetragen oder daraus gelöscht im JSON Format.
+
+**jahre.json**
+Liste der Jahre
+
+**kunden.json**
+Liste alles Kunden
+
+**lieferanten.json**
+Liste mit allen Lieferanten
+
+**umsatz.json**
+Liste mit den Umsätzen
+
+### Datenausgabe
+Beim abrufen der Daten werden die benötigten Einträge herausgezogen und im Frontend mittels Jinja2 ausgegeben.
 
 ## Benutzeranleitung
 
