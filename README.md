@@ -18,7 +18,6 @@ Das Webapp iSales soll Abhilfe schaffen und kann genutzt werden um Ihre Kunden u
 Folgende Pakete müssen noch installiert werden:
 
 - flask
-star:
     - Flask
     - flash
     - render_template

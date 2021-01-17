@@ -71,7 +71,7 @@ def get_revenue():
 
     # Datenvisualisierung der Umsätze (Quelle: https://plotly.com/python/bar-charts/)
     if sumlist:
-        fig = px.bar(x=yearlist, y=sumlist, title="Grafische Abbildung der Umsätze", labels=dict(x="Jahre", y="Umsätze in CHF"))
+        fig = px.bar(x=yearlist, y=sumlist, title="Grafische Abbildung der Umsätze", labels=dict(x="Jahre", y="Umsätze in CHF"), barmode='group')
     else:
         fig = px.bar(x=None, y=None, title="Grafische Abbildung der Umsätze", labels=dict(x="Jahre", y="Umsätze in CHF"))
 
